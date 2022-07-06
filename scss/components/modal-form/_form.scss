@@ -1,5 +1,10 @@
 .modal-form {
-    width: 448px;
+    width: 370px;
+    
+
+    @include mq (desktop) {
+        width: 448px;
+    }
 }
 
 .modal-form__list {
@@ -186,14 +191,28 @@
 }
 
 .modal-form__policy-group-title {
-    line-height: 1.71;
+    
+    font-size: 12px;
+    line-height: 1.17;
+    
+    @include mq (desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 
 .modal-form__policy-group-link {
 
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
+    
+    @include mq (desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
     letter-spacing: 0.03em;
     text-decoration: none;
     text-decoration-line: underline;

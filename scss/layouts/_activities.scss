@@ -4,6 +4,10 @@ activities styles
 
 .activities {
     padding-top: 0;
+
+    @include mq (not-desktop) {
+        display: none;
+    }
 }
 
 .activities__head {

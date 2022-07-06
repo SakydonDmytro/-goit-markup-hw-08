@@ -7,11 +7,13 @@ header styles
     list-style-type: none;
     border-bottom: 1px solid var(--head-border-line-color);
     align-items: center;
+    position: relative;
 }
 
 .header__container {
     display: flex;
     align-items: center;
+
 }
 
 
@@ -20,8 +22,12 @@ header styles
 .navigation {
     display: flex;
     align-items: center;
+    
+    
+    @include mq(mobile-only) {
+        width: 100%;
+    }
 }
-
 .navigation__list {
     list-style-type: none;
     padding-left: 0px;
@@ -29,6 +35,10 @@ header styles
     align-items: center;
     margin-bottom: 0;
     margin-top: 0;
+
+    @include mq(mobile-only) {
+        display: none;
+    }
 }
 
 .navigation__item {
@@ -38,8 +48,6 @@ header styles
     margin-right: 0;
     }
 }
-
-
 .navigation__link {
     text-decoration: none;
     font-weight: 500;
@@ -89,14 +97,33 @@ header styles
 .header__contacts {
     list-style-type: none;
     margin-left: auto;
-    display: flex;
-    align-items: center;
+
     margin-top: 0;
     margin-bottom: 0;
+
+    @include mq(mobile-only) {
+        display: none;
+    }
+    @include mq(desktop) {
+        display: flex;
+        align-items: center;
+    }
+
 }
 
 .header__contact {
-    margin-right: 50px;
+
+@include mq(tablet) {
+    &:not(:last-child) {
+    margin-bottom: 10px;
+            }
+}
+@include mq(desktop) {
+        &:not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 0px;
+            }
+}
 
 &:last-child {
     margin-right: 0;
@@ -109,11 +136,11 @@ header styles
     align-items: center;
 
     text-decoration: none;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
-    padding-bottom: 32px;
-    padding-top: 32px;
+
     transition: color var(--amination);
 
     &:hover,
@@ -127,15 +154,30 @@ header styles
     &:focus .header__phone {
         fill: var(--main-hover-color);
     }
+
+    @include mq (desctop) {
+        font-size: 14px;
+        line-height: 1.14;
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
 }
 
 .header__mail {
-    margin-right: 10px;
+    margin-right: 8px;
+    @include mq (desctop) {
+        margin-right: 10px;
+    }
+    
     fill: var(--secondary-text-color);
 }
 
 .header__phone {
-    margin-right: 10px;
+    margin-right: 8px;
+    @include mq (desctop) {
+        margin-right: 10px;
+    }
+    
     fill: var(--secondary-text-color);
 }
 
@@ -143,3 +185,24 @@ header styles
 .header__phone {
     transition: fill var(--amination);
 }
+
+// menu-button
+
+.mobile-menu-button {
+
+    @include mq(mobile-only){
+    display: block;    
+    margin-left: auto;
+    
+    padding: 0;   
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    }
+    @include mq(tablet) {
+        display: none;
+    }
+
+}
+
+

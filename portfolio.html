@@ -23,20 +23,33 @@
 	</head>
 	<body>
 		<!-- site head -->
+
 		<header class="header">
 			<div class="container header__container">
 				<nav class="navigation">
+					<!-- site logo -->
 					<a class="logo" href="index.html" lang="en">
-						Web
+						<span class="logo__normalizer">Web</span>
 						<span class="logo__part">Studio</span>
 					</a>
+					<!-- mobile menu button-->
+					<button
+						class="mobile-menu-button js-open-menu"
+						aria-expanded="false"
+						aria-controls="mobile-menu"
+						type="button"
+						data-menu-button
+					>
+						<svg class="mobile-menu__on-icon" width="24" height="16" aria-label="Переключатель мобильного меню">
+							<use class="icon-menu" href="./images/sprite.svg#menu-open"></use>
+						</svg>
+					</button>
+
 					<ul class="navigation__list">
 						<li class="navigation__item">
-							<a class="navigation__link" href="./index.html">Студия</a>
+							<a class="navigation__link navigation__link--current" href="./index.html">Студия</a>
 						</li>
-						<li class="navigation__item">
-							<a class="navigation__link navigation__link--current" href="./portfolio.html">Портфолио</a>
-						</li>
+						<li class="navigation__item"><a class="navigation__link" href="./portfolio.html">Портфолио</a></li>
 						<li class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
 					</ul>
 				</nav>
@@ -59,7 +72,59 @@
 					</li>
 				</ul>
 			</div>
+
+			<!-- mobile menu container-->
+
+			<div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+				<button
+					class="mobile-menu-button js-close-menu mobile-menu-button__off"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					type="button"
+					data-menu-button
+				>
+					<svg class="mobile-menu__off-icon" width="24" height="16" aria-label="Переключатель мобильного меню">
+						<use class="icon-cross" href="./images/sprite.svg#mobile-menu-close-icon"></use>
+					</svg>
+				</button>
+				<div class="mobile-menu-list">
+					<div class="mobile-menu__icon-pos">
+						<ul class="mobile-menu__nav">
+							<li class="mobile-menu__nav-item"><a href="index.html" class="mobile-menu__link">Студия</a></li>
+							<li class="mobile-menu__nav-item">
+								<a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+							</li>
+							<li class="mobile-menu__nav-item"><a href="" class="mobile-menu__link">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="mobile-menu__bottom-part">
+						<ul class="mobile-menu__contacts">
+							<li class="mobile-menu__contacts-item">
+								<a href="tel:+380961111111" class="mobile-menu__tel-link">+38 096 111 11 11</a>
+							</li>
+							<li class="mobile-menu__contacts-item">
+								<a href="mailto:info@devstudio.com" class="mobile-menu__mail-link">info@devstudio.com</a>
+							</li>
+						</ul>
+						<ul class="mobile-menu__socials">
+							<li class="mobile-menu__social-item">
+								<a href="#" class="mobile-menu__social-link" target="_blank">Instagram</a>
+							</li>
+							<li class="mobile-menu__social-item">
+								<a href="#" class="mobile-menu__social-link" target="_blank">Twitter</a>
+							</li>
+							<li class="mobile-menu__social-item">
+								<a href="#" class="mobile-menu__social-link" target="_blank">Facebook</a>
+							</li>
+							<li class="mobile-menu__social-item">
+								<a href="#" class="mobile-menu__social-link" target="_blank">LinkedIn</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</header>
+
 		<main>
 			<!-- portfolio section -->
 			<section class="portfolio section">
@@ -261,75 +326,78 @@
 		<!-- footer -->
 		<footer class="footer">
 			<div class="container footer__container">
-				<div class="footer__address-block">
-					<a class="logo footer__logo" href="index.html" lang="en">
-						Web
-						<span class="footer__logo--part">Studio</span>
-					</a>
-					<address class="address">
-						<p class="address">г. Киев, пр-т Леси Украинки, 26</p>
-						<ul class="address__list">
-							<li class="address__item">
-								<a class="address__link" href="mailto:info@example.com">info@example.com</a>
+				<div class="footer__tablet-container">
+					<div class="footer__address-block">
+						<a class="logo footer__logo" href="index.html" lang="en">
+							Web
+							<span class="footer__logo--part">Studio</span>
+						</a>
+						<address class="address">
+							<p class="address__kiev">г. Киев, пр-т Леси Украинки, 26</p>
+							<ul class="address__list">
+								<li class="address__item">
+									<a class="address__link" href="mailto:info@example.com">info@example.com</a>
+								</li>
+								<li>
+									<a class="address__link" href="tel:+380991111111">+38 099 111 11 11</a>
+								</li>
+							</ul>
+						</address>
+					</div>
+
+					<div class="footer__social">
+						<p class="footer__titles">ПРИСОЕДИНЯЙТЕСЬ</p>
+						<ul class="social">
+							<li class="social__item">
+								<a
+									class="social__link social__link--footer"
+									href="#"
+									rel="noopener noreferrer"
+									aria-label="иконка Instagramm"
+								>
+									<svg class="social__icon social__icon--footer" width="20" height="20">
+										<use href="./images/sprite.svg#icon-instagram"></use>
+									</svg>
+								</a>
 							</li>
-							<li>
-								<a class="address__link" href="tel:+380991111111">+38 099 111 11 11</a>
+							<li class="social__item">
+								<a
+									class="social__link social__link--footer"
+									href="#"
+									rel="noopener noreferrer"
+									aria-label="иконка Twitter"
+								>
+									<svg class="social__icon social__icon--footer" width="20" height="20">
+										<use href="./images/sprite.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a
+									class="social__link social__link--footer"
+									href="#"
+									rel="noopener noreferrer"
+									aria-label="иконка Facebook"
+								>
+									<svg class="social__icon social__icon--footer" width="20" height="20">
+										<use href="./images/sprite.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a
+									class="social__link social__link--footer"
+									href="#"
+									rel="noopener noreferrer"
+									aria-label="иконка LinkedIn"
+								>
+									<svg class="social__icon social__icon--footer" width="20" height="20">
+										<use href="./images/sprite.svg#icon-linkedin"></use>
+									</svg>
+								</a>
 							</li>
 						</ul>
-					</address>
-				</div>
-				<div class="footer__social">
-					<p class="footer__titles">ПРИСОЕДИНЯЙТЕСЬ</p>
-					<ul class="social">
-						<li class="social__item">
-							<a
-								class="social__link social__link--footer"
-								href="#"
-								rel="noopener noreferrer"
-								aria-label="иконка Instagramm"
-							>
-								<svg class="social__icon social__icon--footer" width="20" height="20">
-									<use href="./images/sprite.svg#icon-instagram"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a
-								class="social__link social__link--footer"
-								href="#"
-								rel="noopener noreferrer"
-								aria-label="иконка Twitter"
-							>
-								<svg class="social__icon social__icon--footer" width="20" height="20">
-									<use href="./images/sprite.svg#icon-twitter"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a
-								class="social__link social__link--footer"
-								href="#"
-								rel="noopener noreferrer"
-								aria-label="иконка Facebook"
-							>
-								<svg class="social__icon social__icon--footer" width="20" height="20">
-									<use href="./images/sprite.svg#icon-facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a
-								class="social__link social__link--footer"
-								href="#"
-								rel="noopener noreferrer"
-								aria-label="иконка LinkedIn"
-							>
-								<svg class="social__icon social__icon--footer" width="20" height="20">
-									<use href="./images/sprite.svg#icon-linkedin"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
+					</div>
 				</div>
 				<div class="subscribe">
 					<p class="footer__titles">Подпишитесь на рассылку</p>
@@ -348,5 +416,12 @@
 				</div>
 			</div>
 		</footer>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/mobile-menu.js"></script>
 	</body>
 </html>

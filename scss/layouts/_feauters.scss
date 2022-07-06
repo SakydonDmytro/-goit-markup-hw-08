@@ -1,27 +1,61 @@
-/*~~~~~~~~~~~~ 
-feauter styles
- ~~~~~~~~~~~*/
-
 .feauters__list {
     list-style-type: none;
+    
+@include mq(tablet) {
     display: flex;
+    flex-wrap: wrap;
+}
+
+@include mq(desktop) {
+    flex-wrap: nowrap;
+}
 }
 
 .features__item {
-    width: 270px;
 
-&:not(:last-child) {
+
+@include mq(mobile-only) {
+    width: 100%;
+    &:not(:last-child) {
+    margin-bottom: 30px;
+}
+}    
+@include mq(tablet) {
+    width: 354px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    &:nth-child(2n+1) {
+    margin-right: 30px;
+
+    }
+}
+@include mq(desktop) {
+
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+    width: 270px;
+    display: block;
+    
+    &:not(:last-child) {
     margin-right: 30px;
     }
 }
 
+}
+
 .feauters__description {
-    font-size: 14px;
+
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @include mq (mobile-only) {
+        text-align: center;
+    }
 }
 
 .feauters__text {
@@ -31,12 +65,30 @@ feauter styles
 }
 
 .feauters__icon {
-    width: 270px;
-    height: 120px;
+    
     background-color: var(--third-background-color);
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+    height: 120px;
+
+    @include mq (mobile) {
+    
+    width: 450px;
+
+    }
+
+    @include mq (tablet) {
+        
+    width: 354px;
+                  
+    }
+    
+    @include mq (desktop) {
+        
+    width: 270px;
+        
+    }
 }

@@ -1376,8 +1376,6 @@ Footer styles
 }
 @media screen and (min-width: 768px) {
   .portfolio-item {
-    display: flex;
-    flex-direction: column;
     width: 354px;
   }
   .portfolio-item:nth-child(2n+1) {
@@ -1405,6 +1403,7 @@ Footer styles
     display: flex;
     flex-direction: column;
     height: 100%;
+    text-decoration: none;
   }
 }
 .portfolio-item-box:hover .Image-styles::before, .portfolio-item-box:focus .Image-styles::before {
@@ -1472,11 +1471,6 @@ Footer styles
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
-}
-
-.portfolio-item-box {
-  text-decoration: none;
-  display: inline-block;
 }
 
 .portfolio-item-class {

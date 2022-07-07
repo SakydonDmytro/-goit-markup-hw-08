@@ -47,12 +47,12 @@
 }
 
 .portfolio-item-box {
-
+    text-decoration: none;
 @include mq (tablet) {
     display: flex;
     flex-direction: column;
     height: 100%;
-    text-decoration: none;
+ 
 }
     
     transition: box-shadow var(--amination);
@@ -119,6 +119,7 @@
 }
 
 .card-context {
+ 
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;

@@ -795,6 +795,9 @@ header styles
 }
 
 .hero__heading {
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
@@ -806,6 +809,9 @@ header styles
 }
 @media screen and (min-width: 1200px) {
   .hero__heading {
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -858,6 +864,7 @@ header styles
 }
 
 .feauters__description {
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -1165,6 +1172,7 @@ Footer styles
   background-color: #2F303A;
   padding-top: 60px;
   padding-bottom: 60px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1188,6 +1196,11 @@ Footer styles
     margin-right: 70px;
   }
 }
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
+  .footer__address-block {
+    padding-left: 0;
+  }
+}
 .footer__logo {
   font-family: "Raleway";
   font-size: 24px;
@@ -1202,6 +1215,7 @@ Footer styles
 }
 @media screen and (min-width: 1200px) {
   .footer__logo {
+    text-align: left;
     font-size: 26px;
     line-height: 1.19;
   }
@@ -1225,6 +1239,10 @@ Footer styles
     margin-bottom: 0;
     text-align: left;
   }
+}
+
+.address__kiev {
+  margin-bottom: 8px;
 }
 
 .address__list {
@@ -1396,6 +1414,7 @@ Footer styles
 }
 
 .portfolio-item-box {
+  text-decoration: none;
   transition: box-shadow var(--amination);
 }
 @media screen and (min-width: 768px) {
@@ -1403,7 +1422,6 @@ Footer styles
     display: flex;
     flex-direction: column;
     height: 100%;
-    text-decoration: none;
   }
 }
 .portfolio-item-box:hover .Image-styles::before, .portfolio-item-box:focus .Image-styles::before {

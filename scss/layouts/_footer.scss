@@ -6,6 +6,7 @@ Footer styles
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+    width: 100%;
 
 }
 
@@ -27,6 +28,9 @@ Footer styles
 }
 
 .footer__address-block {
+    @include mq (desktop) {
+        padding-left: 0;
+    }
     margin-right: 70px;
 }
 }
@@ -47,6 +51,7 @@ Footer styles
     padding: 0px;
 
     @include mq (desktop) {
+    text-align: left;
     font-size: 26px;
     line-height: 1.19;
    
@@ -71,6 +76,9 @@ Footer styles
         text-align: left;
     }
     text-align: center;
+}
+.address__kiev {
+    margin-bottom: 8px;
 }
 
 .address__list {

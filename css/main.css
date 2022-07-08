@@ -84,6 +84,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -795,7 +797,7 @@ header styles
 }
 
 .hero__heading {
-  width: 360px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -807,11 +809,14 @@ header styles
   text-transform: uppercase;
   color: var(--main-button-text-color);
 }
+@media screen and (min-width: 480px) {
+  .hero__heading {
+    width: 360px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero__heading {
     width: 696px;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -891,11 +896,6 @@ header styles
   justify-content: center;
   margin-bottom: 30px;
   height: 120px;
-}
-@media screen and (min-width: 480px) {
-  .feauters__icon {
-    width: 450px;
-  }
 }
 @media screen and (min-width: 768px) {
   .feauters__icon {
@@ -1021,13 +1021,6 @@ activities styles
 @media screen and (min-width: 1200px) {
   .team__member {
     margin-right: 30px;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .team__member-picture {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -1172,7 +1165,6 @@ Footer styles
   background-color: #2F303A;
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1384,7 +1376,6 @@ Footer styles
 }
 
 .portfolio-item {
-  width: 450px;
   background: var(--main-background-color);
   box-sizing: border-box;
   transition: box-shadow var(--amination);

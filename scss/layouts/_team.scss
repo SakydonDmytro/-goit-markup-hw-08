@@ -75,13 +75,13 @@
     }
     
 }
-.team__member-picture {
+// .team__member-picture {
     
-    @include mq(mobile-only) {
-    margin-left: auto;
-    margin-right: auto;
-    }
-}
+//     @include mq(mobile-only) {
+//     margin-left: auto;
+//     margin-right: auto;
+//     }
+// }
 
 .team__member-info {
     padding: 30px 32px;
